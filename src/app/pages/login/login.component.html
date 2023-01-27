@@ -1,0 +1,47 @@
+<div class="bootstrap-wrapper mt40px">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <mat-card >
+                    <div class="container text-center mB15px">
+                        <img src="../../../assets/login_130px.png" alt="\Login image not found\" />
+                    </div>
+
+
+                    <h1 class="text-center">Login here !!</h1>
+
+                    <!-- {{ loginData | json }} -->
+                    <form class="text-center" (ngSubmit)="formSubmit()">
+                        <!-- username -->
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>User Name</mat-label>
+                            <input required [(ngModel)]="loginData.username" name="username" matInput
+                                placeholder="Enter here">
+                            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                            <!-- <mat-hint>Username must be unique !!</mat-hint> -->
+                        </mat-form-field>
+
+                        <!-- password -->
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>User Password</mat-label>
+                            <input required [(ngModel)]="loginData.password" name="password" type="password" matInput
+                                placeholder="Enter here">
+                            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                            <!-- <mat-hint>Hint</mat-hint> -->
+                        </mat-form-field>
+
+                        <div class="container">
+                            <button type="submit" mat-raised-button color="primary">Sign in</button>
+
+                            <button mat-raised-button color="accent" class="ml30px">Sign up</button>
+
+                            <button mat-raised-button color="accent" class="ml30px"> Clear </button>
+                        </div>
+                    </form>
+                </mat-card>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
